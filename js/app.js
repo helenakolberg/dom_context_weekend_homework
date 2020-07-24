@@ -23,4 +23,9 @@ const handleFormSubmit = function (event) {
     const ownerDiv = document.createElement('div');
     ownerDiv.textContent = `${owner}`;
     ownerDiv.classList.add('owner-item');
+
+    const listElement = document.createElement('li');
+    listElement.appendChild(nameDiv);
+    listElement.appendChild(locationDiv);
+    listElement.appendChild(ownerDiv);
 };
