@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const submit = document.querySelector('#heritage-form');
     submit.addEventListener('submit', handleFormSubmit);
+
+    const deleteList = document.querySelector('#delete-form');
+    deleteList.addEventListener('submit', handleFormDelete);
 });
 
 const handleFormSubmit = function (event) {
@@ -33,4 +36,9 @@ const handleFormSubmit = function (event) {
     heritageList.appendChild(listElement);
 
     event.target.reset();
+};
+
+const handleFormDelete = function (event) {
+    const heritageList = document.querySelector('#sites-list');
+    heritageList.removeChild('li')
 };
