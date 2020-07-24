@@ -20,5 +20,7 @@ const handleFormSubmit = function (event) {
     locationDiv.textContent = `${location}`;
     locationDiv.classList.add('location-item');
 
-    
+    const ownerDiv = document.createElement('div');
+    ownerDiv.textContent = `${owner}`;
+    ownerDiv.classList.add('owner-item');
 };
