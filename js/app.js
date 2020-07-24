@@ -16,4 +16,9 @@ const handleFormSubmit = function (event) {
     nameDiv.textContent = `${name}`;
     nameDiv.classList.add('name-item');
 
+    const locationDiv = document.createElement('div');
+    locationDiv.textContent = `${location}`;
+    locationDiv.classList.add('location-item');
+
+    
 };
