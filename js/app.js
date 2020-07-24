@@ -1,3 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Javascript has loaded');
+
+    const submit = document.querySelector('#heritage-form');
+    submit.addEventListener('submit', handleFormSubmit);
 });
+
+const handleFormSubmit = function (event) {
+    event.preventDefault();
+
+    const name = event.target.name.value;
+    const location = event.target.location.value;
+    const owner = event.target.owner.value;
+
+    const nameDiv = document.createElement('div');
+    nameDiv.textContent = `${name}`;
+    nameDiv.classList.add('name-item');
+
+};
