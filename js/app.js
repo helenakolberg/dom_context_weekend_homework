@@ -31,4 +31,6 @@ const handleFormSubmit = function (event) {
 
     const heritageList = document.querySelector('#heritage-form');
     heritageList.appendChild(listElement);
+
+    event.target.reset();
 };
