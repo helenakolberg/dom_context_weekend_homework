@@ -28,4 +28,7 @@ const handleFormSubmit = function (event) {
     listElement.appendChild(nameDiv);
     listElement.appendChild(locationDiv);
     listElement.appendChild(ownerDiv);
+
+    const heritageList = document.querySelector('#heritage-form');
+    heritageList.appendChild(listElement);
 };
