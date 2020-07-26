@@ -8,37 +8,46 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteList.addEventListener('submit', handleFormDelete);
 });
 
-    const name = function (event) {
-        return event.target.name.value;
-    }
+const name = function (event) {
+    return event.target.name.value;
+};
 
-    const siteLocation = function (event) {
-        return event.target.location.value;
-    }
+const siteLocation = function (event) {
+    return event.target.location.value;
+};
 
-    const owner = function (event) {
-        return event.target.owner.value;
-    }
+const owner = function (event) {
+    return event.target.owner.value;
+};
+
+const newElement = function (formValueCallback) {
+    const element = document.createElement('div');
+    element.textContent = `${formValueCallback}`;
+    return element;
+};
 
 const handleFormSubmit = function (event) {
     event.preventDefault();
 
-    const nameDiv = document.createElement('div');
-    nameDiv.textContent = `${name(event)}`;
-    nameDiv.classList.add('name-item');
+    newElement(name(event));
+    // const nameDiv = document.createElement('div');
+    // nameDiv.textContent = `${name(event)}`;
+    // .classList.add('name-item');
 
-    const locationDiv = document.createElement('div');
-    locationDiv.textContent = `${siteLocation(event)}`;
-    locationDiv.classList.add('location-item');
+    // const locationDiv = document.createElement('div');
+    // locationDiv.textContent = `${siteLocation(event)}`;
+    newElement(siteLocation(event));
+    // .classList.add('location-item');
 
-    const ownerDiv = document.createElement('div');
-    ownerDiv.textContent = `${owner(event)}`;
-    ownerDiv.classList.add('owner-item');
+    // const ownerDiv = document.createElement('div');
+    // ownerDiv.textContent = `${owner(event)}`;
+    newElement(owner(event));
+    // .classList.add('owner-item');
 
     const listElement = document.createElement('li');
-    listElement.appendChild(nameDiv);
-    listElement.appendChild(locationDiv);
-    listElement.appendChild(ownerDiv);
+    listElement.appendChild(newElement(name(event)));
+    listElement.appendChild( newElement(siteLocation(event)));
+    listElement.appendChild(newElement(owner(event)));
 
     const heritageList = document.querySelector('#sites-list');
     heritageList.appendChild(listElement);
