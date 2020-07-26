@@ -29,25 +29,14 @@ const newElement = function (formValueCallback) {
 const handleFormSubmit = function (event) {
     event.preventDefault();
 
-    newElement(name(event));
-    // const nameDiv = document.createElement('div');
-    // nameDiv.textContent = `${name(event)}`;
-    // .classList.add('name-item');
-
-    // const locationDiv = document.createElement('div');
-    // locationDiv.textContent = `${siteLocation(event)}`;
-    newElement(siteLocation(event));
-    // .classList.add('location-item');
-
-    // const ownerDiv = document.createElement('div');
-    // ownerDiv.textContent = `${owner(event)}`;
-    newElement(owner(event));
-    // .classList.add('owner-item');
+    newElement(name(event)).classList.add('name-item');
+    newElement(siteLocation(event)).classList.add('location-item');
+    newElement(owner(event)).classList.add('owner-item');
 
     const listElement = document.createElement('li');
-    listElement.appendChild(newElement(name(event)));
-    listElement.appendChild( newElement(siteLocation(event)));
-    listElement.appendChild(newElement(owner(event)));
+    listElement.appendChild( newElement( name(event) ) );
+    listElement.appendChild( newElement( siteLocation(event) ) );
+    listElement.appendChild( newElement( owner(event) ) );
 
     const heritageList = document.querySelector('#sites-list');
     heritageList.appendChild(listElement);
