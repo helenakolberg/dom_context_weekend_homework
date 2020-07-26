@@ -32,7 +32,7 @@ const handleFormSubmit = function (event) {
     listElement.appendChild(locationDiv);
     listElement.appendChild(ownerDiv);
 
-    const heritageList = document.querySelector('#heritage-form');
+    const heritageList = document.querySelector('#sites-list');
     heritageList.appendChild(listElement);
 
     event.target.reset();
