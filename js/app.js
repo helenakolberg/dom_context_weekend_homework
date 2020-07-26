@@ -20,45 +20,34 @@ const owner = function (event) {
     return event.target.owner.value;
 };
 
+const fee = function (event) {
+    return event.target.fee.value;
+}
+
 const newElement = function (formValueCallback) {
-    const element = document.createElement('div');
-    element.textContent = `${formValueCallback}`;
-    return element;
+    const myElement = document.createElement('div');
+    myElement.textContent = `${formValueCallback}`;
+    return myElement;
 };
 
 const handleFormSubmit = function (event) {
     event.preventDefault();
 
-<<<<<<< HEAD
-    newElement(name(event)).classList.add('name-item');
-    newElement(siteLocation(event)).classList.add('location-item');
-    newElement(owner(event)).classList.add('owner-item');
+    const nameItem = newElement(name(event));
+    const locationItem = newElement(siteLocation(event));
+    const ownerItem = newElement(owner(event));
+    const feeItem = newElement(fee(event));
+
+    nameItem.classList.add('name-item');
+    locationItem.classList.add('location-item');
+    ownerItem.classList.add('owner-item');
+    feeItem.classList.add('fee-item');
 
     const listElement = document.createElement('li');
-    listElement.appendChild( newElement( name(event) ) );
-    listElement.appendChild( newElement( siteLocation(event) ) );
-    listElement.appendChild( newElement( owner(event) ) );
-=======
-    newElement(name(event));
-    // const nameDiv = document.createElement('div');
-    // nameDiv.textContent = `${name(event)}`;
-    // .classList.add('name-item');
-
-    // const locationDiv = document.createElement('div');
-    // locationDiv.textContent = `${siteLocation(event)}`;
-    newElement(siteLocation(event));
-    // .classList.add('location-item');
-
-    // const ownerDiv = document.createElement('div');
-    // ownerDiv.textContent = `${owner(event)}`;
-    newElement(owner(event));
-    // .classList.add('owner-item');
-
-    const listElement = document.createElement('li');
-    listElement.appendChild(newElement(name(event)));
-    listElement.appendChild( newElement(siteLocation(event)));
-    listElement.appendChild(newElement(owner(event)));
->>>>>>> 5d9cdf5ec756c64d3caf7be78a2878ada9ca6ec2
+    listElement.appendChild(nameItem);
+    listElement.appendChild(locationItem);
+    listElement.appendChild(ownerItem);
+    listElement.appendChild(feeItem);
 
     const heritageList = document.querySelector('#sites-list');
     heritageList.appendChild(listElement);

@@ -1,8 +1,55 @@
 body {
-    background-color: #928a8a;
+    background-color: #dadada;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #heritage-form {
-    display: flexbox;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 30px 30px;
+    text-decoration: none;
+}
+
+.form-item {
+    margin: 5px 5px 0;
+}
+
+#submit {
+    width: 70px;
+    margin: 5px 5px 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#sites-list {
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#sites-list > li {
+    border: solid black;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.name-item {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.location-item {
+    font-size: 20px;
+}
+
+.owner-item {
+    font-style: italic;
+    font-size: 20px;
 }
