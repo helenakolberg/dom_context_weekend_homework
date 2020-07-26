@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const checkOwner = function (value) {
     const element = document.getElementById('owner_other');
-    if (value === 'Other') {
+    if (value === 'Owner:') {
         element.style.display = 'block';
     } else {
         element.style.display = 'none';
@@ -52,12 +52,6 @@ const handleFormSubmit = function (event) {
     const feeItem = newElement(fee(event));
     const ownerOtherItem = newElement(ownerOther(event));
 
-    if (this.fee.value === 'No') {
-        feeItem.textContent = 'No fee';
-    } else if (this.fee.value === 'Yes') {
-        feeItem.textContent = 'Entrance fee';
-    };
-
     nameItem.classList.add('name-item');
     locationItem.classList.add('location-item');
     ownerItem.classList.add('owner-item');
@@ -68,8 +62,8 @@ const handleFormSubmit = function (event) {
     listElement.appendChild(nameItem);
     listElement.appendChild(locationItem);
     listElement.appendChild(ownerItem);
-    listElement.appendChild(feeItem);
     listElement.appendChild(ownerOtherItem);
+    listElement.appendChild(feeItem);
 
     const heritageList = document.querySelector('#sites-list');
     heritageList.appendChild(listElement);

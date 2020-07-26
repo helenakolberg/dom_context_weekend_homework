@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 30px 30px;
+    padding: 30px;
     text-decoration: none;
     background-color: #be4a4a;
     color: #ffffff;
@@ -44,30 +44,35 @@ h1 {
     font-size: 28px;
     font-weight: 900;
     text-transform: uppercase;
-    margin: 8px 8px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .location-item {
     font-size: 20px;
-    margin: 8px 8px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .owner-item {
     font-style: italic;
-    font-size: 16px;
-    margin: 8px 8px 0px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .fee-item {
-    font-size: 12;
+    font-size: 14px;
     font-weight: bold;
-    margin: 8px 8px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .owner-other-item {
     font-style: italic;
-    font-size: 16px;
-    margin: 8px 8px 0px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 input {
@@ -104,4 +109,9 @@ select {
 select:focus {
     outline: none;
     border: 2px solid;
+}
+
+#delete-form {
+    text-align: right;
+    margin-right: 30px;
 }
