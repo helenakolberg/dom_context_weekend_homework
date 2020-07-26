@@ -1,0 +1,8 @@
+body {
+    background-color: #928a8a;
+}
+
+#heritage-form {
+    display: flexbox;
+    flex-direction: row;
+}

@@ -29,6 +29,7 @@ const newElement = function (formValueCallback) {
 const handleFormSubmit = function (event) {
     event.preventDefault();
 
+<<<<<<< HEAD
     newElement(name(event)).classList.add('name-item');
     newElement(siteLocation(event)).classList.add('location-item');
     newElement(owner(event)).classList.add('owner-item');
@@ -37,6 +38,27 @@ const handleFormSubmit = function (event) {
     listElement.appendChild( newElement( name(event) ) );
     listElement.appendChild( newElement( siteLocation(event) ) );
     listElement.appendChild( newElement( owner(event) ) );
+=======
+    newElement(name(event));
+    // const nameDiv = document.createElement('div');
+    // nameDiv.textContent = `${name(event)}`;
+    // .classList.add('name-item');
+
+    // const locationDiv = document.createElement('div');
+    // locationDiv.textContent = `${siteLocation(event)}`;
+    newElement(siteLocation(event));
+    // .classList.add('location-item');
+
+    // const ownerDiv = document.createElement('div');
+    // ownerDiv.textContent = `${owner(event)}`;
+    newElement(owner(event));
+    // .classList.add('owner-item');
+
+    const listElement = document.createElement('li');
+    listElement.appendChild(newElement(name(event)));
+    listElement.appendChild( newElement(siteLocation(event)));
+    listElement.appendChild(newElement(owner(event)));
+>>>>>>> 5d9cdf5ec756c64d3caf7be78a2878ada9ca6ec2
 
     const heritageList = document.querySelector('#sites-list');
     heritageList.appendChild(listElement);
