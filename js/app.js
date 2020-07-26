@@ -52,6 +52,12 @@ const handleFormSubmit = function (event) {
     const feeItem = newElement(fee(event));
     const ownerOtherItem = newElement(ownerOther(event));
 
+    if (this.fee.value === 'No') {
+        feeItem.textContent = 'No fee';
+    } else if (this.fee.value === 'Yes') {
+        feeItem.textContent = 'Entrance fee';
+    };
+
     nameItem.classList.add('name-item');
     locationItem.classList.add('location-item');
     ownerItem.classList.add('owner-item');

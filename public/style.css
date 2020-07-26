@@ -44,20 +44,30 @@ h1 {
     font-size: 28px;
     font-weight: 900;
     text-transform: uppercase;
+    margin: 8px 8px 0px;
 }
 
 .location-item {
     font-size: 20px;
+    margin: 8px 8px 0px;
 }
 
 .owner-item {
     font-style: italic;
     font-size: 16px;
+    margin: 8px 8px 0px;
 }
 
 .fee-item {
     font-size: 12;
     font-weight: bold;
+    margin: 8px 8px 0px;
+}
+
+.owner-other-item {
+    font-style: italic;
+    font-size: 16px;
+    margin: 8px 8px 0px;
 }
 
 input {
