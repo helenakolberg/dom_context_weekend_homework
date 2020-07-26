@@ -1,5 +1,5 @@
 body {
-    background-color: #dadada;
+    background-color: #ffffff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -7,21 +7,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 30px 30px;
+    padding: 30px 30px;
     text-decoration: none;
+    background-color: #be4a4a;
+    color: #ffffff;
 }
 
 .form-item {
-    margin: 5px 5px 0;
-}
-
-#submit {
-    width: 70px;
-    margin: 5px 5px 0;
+    margin: 8px 8px 0;
 }
 
 h1 {
     text-align: center;
+    margin: 50px;
 }
 
 #sites-list {
@@ -33,15 +31,18 @@ h1 {
 }
 
 #sites-list > li {
-    border: solid black;
-    border-radius: 20px;
+    border: solid #494949;
+    border-radius: 40px;
     padding: 15px;
     text-align: center;
+    background-color: #be4a4a;
+    color: #ffffff;
+    margin: 5px;
 }
 
 .name-item {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 900;
     text-transform: uppercase;
 }
 
@@ -51,5 +52,46 @@ h1 {
 
 .owner-item {
     font-style: italic;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.fee-item {
+    font-size: 12;
+    font-weight: bold;
+}
+
+input {
+    border: solid 1px #494949;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 2px solid;
+}
+
+#submit, #delete {
+    background-color: #ffffff;
+    border: 2px solid #494949;
+    font-weight: bold;
+    margin: 5px 5px 0px;
+    width: 80px;
+    height: 30px;
+}
+
+#submit:hover, #delete:hover {
+    background-color: #be4a4a;
+    border: 2px solid #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+select {
+    border: solid 1px #494949;
+    border-radius: 4px;
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid;
 }

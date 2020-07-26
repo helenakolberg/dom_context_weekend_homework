@@ -59,3 +59,12 @@ const handleFormDelete = function (event) {
     const heritageList = document.querySelector('#sites-list');
     heritageList.removeChild('li')
 };
+
+const checkOwner = function (value) {
+    const element = document.getElementById('owner-other');
+    if (value === 'Other') {
+        element.style.display = 'block';
+    } else {
+        element.style.display = 'none';
+    }
+}
