@@ -8,15 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteList.addEventListener('submit', handleFormDelete);
 });
 
+    const name = function (event) {
+        return event.target.name.value;
+    }
+
 const handleFormSubmit = function (event) {
     event.preventDefault();
 
-    const name = event.target.name.value;
+    // const name = event.target.name.value;
     const location = event.target.location.value;
     const owner = event.target.owner.value;
 
     const nameDiv = document.createElement('div');
-    nameDiv.textContent = `${name}`;
+    nameDiv.textContent = `${name(event)}`;
     nameDiv.classList.add('name-item');
 
     const locationDiv = document.createElement('div');
